@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "skills": {
+    "uni-app": {
+      "source": "uni-helper/skills",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "sourceType": "github",
+      "skillPath": "skills/uniapp/SKILL.md",
+      "computedHash": "0fb0623824d3152255a0fdcb8306360f93624cdf28a45faea6d56304ecbef8f5"
+    },
+    "vite": {
+      "source": "uni-helper/skills",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "sourceType": "github",
+      "skillPath": "skills/vite/SKILL.md",
+      "computedHash": "ebd754557f9def629f5843b705b633e1818cfae80524e9eaaea83c758fa3fb5d"
+    },
+    "vue": {
+      "source": "uni-helper/skills",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "sourceType": "github",
+      "skillPath": "skills/vue/SKILL.md",
+      "computedHash": "98b12515fd95b1253d3290776e0bb9704ab313a4788520798424d336e9a94d29"
+    },
+    "vue-best-practices": {
+      "source": "uni-helper/skills",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "sourceType": "github",
+      "skillPath": "skills/vue-best-practices/SKILL.md",
+      "computedHash": "800fa78d2fdd81543acc756a8b8430e60466765e34750b758e39683359ad5865"
+    },
+    "vueuse-functions": {
+      "source": "uni-helper/skills",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "sourceType": "github",
+      "skillPath": "skills/vueuse-functions/SKILL.md",
+      "computedHash": "9fc701c2d1b1315baa387342e61860fb9a48e433e3790dd62ea68319be1f69bb"
+    }
+  }
+}

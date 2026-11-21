@@ -1,0 +1,41 @@
+---
+description: 本项目（uni-app Vue3 + Vite + TDesign UniApp）每次编码任务必守的高质量代码底线，包含技术栈事实、编码规范、API 准确性、最小改动与验证闭环
+alwaysApply: true
+enabled: true
+updatedAt: 2026-11-21T00:00:00.000Z
+provider:
+---
+
+# 高质量代码底线（每次编码任务必守）
+
+## 1. 技术栈与事实来源
+
+- 本项目是 uni-app Vue3 CLI 工程（Vite 5），组件库为 `@tdesign/uniapp` 1.0.0，通过 easycom 自动导入，`t-` 前缀。
+- **TDesign 组件 API 禁止凭记忆编写**：props / events / slots 必须查 `tdesign-mcp-server`（若已配置）或 TDesign 官方文档。MCP 不可用时要明确说明并查官方文档，不得猜。
+- uni-app 的平台差异、生命周期、条件编译必须查 `uni-app` skill 或 DCloud 官方文档，不凭经验下结论。
+
+## 2. 编码规范（每次必守）
+
+- Vue 组件必须用 `<script setup>` + Composition API，按 `vue-best-practices` skill 执行（该 skill 描述为 MUST be used for Vue.js tasks）。
+- 新增页面/组件统一用 `t-` 前缀标签 + easycom 自动导入，不手动 `import` 组件、不写 `components` 注册。
+- 网络请求用 `uni.request`，不引入 axios 等 Web 专用方案；路由用 `uni.navigateTo` / `uni.switchTab` 等 uni API。
+- 平台差异必须用 `#ifdef` / `#ifndef` 显式隔离，不写依赖运行时判断的隐式兼容代码。
+- 主题样式用 TDesign 的 `theme.less`（rpx），尺寸用 rpx，不直接改 `uni.scss` 的 `$uni-*` 变量来做 TDesign 主题定制。
+- 非必要不新增依赖；新增前先确认现有依赖或 uni 官方能力是否已覆盖，并说明理由。
+
+## 3. 最小改动原则
+
+- 只改任务要求的部分，不做未要求的重构、不扩大改动范围。启用 `ponytail` 的取向：用最少的新代码完整解决问题。
+- 确实需要妥协时，用 `shortcut:` 注释写明上限与升级路径（供 `ponytail-debt` 汇总），不允许无标记的临时方案。
+
+## 4. 验证闭环（每次改完必做）
+
+- 改完代码后必须运行 `pnpm run build:h5` 和 `pnpm run build:mp-weixin`；任一失败不算完成，须修复后重跑。
+- 涉及状态管理、异步流程、权限、安全等风险逻辑时，按 `ponytail-review` 的标准自查一次：正确、安全、真实负载下成立、有测试、够快、每行必要。
+- 用户要求 review 时，按 `ponytail-review` 输出完整报告；要求全仓审计时按 `ponytail-audit` 执行。
+
+## 5. 交付要求
+
+- 回复末尾用一两行说明：跳过了什么、没验证什么、用户必须知道的风险。
+- 不主动执行 `git commit` 或推送，除非用户明确要求。
+- 不确定时说明"不确定"并去查证，不用看似合理的猜测填充空白。
