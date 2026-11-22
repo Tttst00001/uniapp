@@ -1,48 +1,49 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+  <view class="page">
+    <view class="page-body">
+      <view class="header">
+        <view :style="{ height: statusBarHeight + 'px' }" />
+        <view class="brand-row">
+          <t-image
+            class="logo"
+            src="https://i.ibb.co/JRvr5XMq/img-logo.png"
+            mode="aspectFit"
+          />
+        </view>
+        <view class="search-row">
+          <t-search
+            class="search"
+            placeholder="搜索赛事名称"
+            shape="round"
+            :clearable="false"
+          />
+          <view class="message-wrap">
+            <t-badge :count="3">
+              <view class="message-btn">
+                <t-icon name="chat" size="1.125rem" />
+              </view>
+            </t-badge>
+          </view>
+        </view>
+      </view>
+
+      <t-image
+        class="banner"
+        src="https://i.ibb.co/Mk1Y2Z3C/img-banner.png"
+        mode="widthFix"
+      />
+
+      <match-list />
+
+      <view class="bottom">
+        <game-tabbar />
+      </view>
     </view>
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {},
-}
+<script setup>
+import { statusBarHeight } from '@/utils/system'
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style src="./index.css"></style>

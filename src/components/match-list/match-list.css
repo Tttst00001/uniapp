@@ -1,0 +1,29 @@
+.match-list {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0.625rem 0.5rem;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.match-list__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.375rem;
+}
+
+.match-list__scroll {
+  flex: 1;
+  min-height: 0;
+  --td-cell-bg-color: #ffffff;
+  --td-cell-hover-color: #f3f3f3;
+  --td-cell-title-color: rgba(0, 0, 0, 0.9);
+  --td-cell-description-color: rgba(0, 0, 0, 0.6);
+  --td-cell-note-color: rgba(0, 0, 0, 0.4);
+  --td-cell-right-icon-color: rgba(0, 0, 0, 0.4);
+}

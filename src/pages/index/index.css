@@ -1,0 +1,76 @@
+.page {
+  min-height: 100vh;
+  background-image: url('https://i.ibb.co/jZDxgy3m/bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.page-body {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding-bottom: 0.625rem;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 0.875rem 0.75rem;
+}
+
+.logo {
+  display: block;
+  width: 7.25rem;
+  height: 2.5625rem;
+}
+
+.brand-name {
+  margin-left: 0.5rem;
+  color: #ffffff;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  padding: 0 0.875rem;
+}
+
+.search {
+  flex: 1;
+  --td-search-bg-color: #ffffff;
+  --td-search-font: 0.875rem / 1.3125rem PingFang SC, Microsoft YaHei, Arial Regular;
+  --td-search-height: 2rem;
+  --td-search-placeholder-color: #9b7fc9;
+  --td-search-icon-color: #9b7fc9;
+}
+
+.message-wrap {
+  margin-left: 0.5rem;
+}
+
+.message-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  display: block;
+  width: calc(100% - 1rem);
+  margin: 0.625rem 0.5rem 0;
+}
+
+.bottom {
+  margin-top: auto;
+}

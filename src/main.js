@@ -1,4 +1,4 @@
-import "@tdesign/uniapp/theme.less";
+import "./styles/theme-custom.less";
 import {
 	createSSRApp
 } from "vue";

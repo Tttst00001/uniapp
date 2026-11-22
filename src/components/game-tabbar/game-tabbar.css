@@ -1,0 +1,31 @@
+.create-button-wrap {
+  position: absolute;
+  left: 50%;
+  top: -1.75rem;
+  transform: translateX(-50%);
+  width: 3.375rem;
+  height: 3.375rem;
+  z-index: 2;
+}
+
+.create-button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1875rem solid #ffffff;
+  border-radius: 0.6875rem;
+  background: linear-gradient(135deg, #a86ff7 0%, #7b2ff7 100%);
+  box-shadow: 0 0.3125rem 0.75rem rgba(123, 47, 247, 0.35);
+  transform: rotate(45deg);
+}
+
+.create-button__text {
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  transform: rotate(-45deg);
+}

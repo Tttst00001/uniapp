@@ -1,5 +1,5 @@
 ---
-description: 本项目（uni-app Vue3 + Vite + TDesign UniApp）每次编码任务必守的高质量代码底线，包含技术栈事实、编码规范、API 准确性、最小改动与验证闭环
+description: 本项目（uni-app Vue3 + Vite + TDesign UniApp）每次编码任务必守的高质量代码底线，包含 skill 调用顺序、技术栈事实、编码规范、API 准确性、最小改动与验证闭环
 alwaysApply: true
 enabled: true
 updatedAt: 2026-11-21T00:00:00.000Z
@@ -7,6 +7,16 @@ provider:
 ---
 
 # 高质量代码底线（每次编码任务必守）
+
+## 0. Skill 调用顺序（强制，最高优先级）
+
+每次编码任务必须在动手前加载以下三个 skill（可并行加载），并严格按此顺序应用，不得颠倒或省略：
+
+1. **ponytail（决策层，最先）**：先读任务与涉及代码，确定改动范围，找最小完整方案。决定"要不要写、写多少"。
+2. **vue-best-practices（实现层）**：`<script setup>` + Composition API、规范响应式与组件通信。决定"怎么写"。
+3. **uni-app（约束层）**：uni-app 内置组件/API、rpx、条件编译、双端构建验证。决定"在这个项目里怎么写才不出错"。
+
+回答中若调用了 skill，末尾按格式 `[skill名1, skill名2]` 标注实际调用的 skill 名称（如 `[ponytail, vue-best-practices, uni-app]`）；未调用则不标。
 
 ## 1. 技术栈与事实来源
 
@@ -20,7 +30,8 @@ provider:
 - 新增页面/组件统一用 `t-` 前缀标签 + easycom 自动导入，不手动 `import` 组件、不写 `components` 注册。
 - 网络请求用 `uni.request`，不引入 axios 等 Web 专用方案；路由用 `uni.navigateTo` / `uni.switchTab` 等 uni API。
 - 平台差异必须用 `#ifdef` / `#ifndef` 显式隔离，不写依赖运行时判断的隐式兼容代码。
-- 主题样式用 TDesign 的 `theme.less`（rpx），尺寸用 rpx，不直接改 `uni.scss` 的 `$uni-*` 变量来做 TDesign 主题定制。
+- 主题样式用 TDesign 的 `theme.less`，**CSS 尺寸统一用 rem**（换算基准：1rem = 32rpx，即 16px 根字号；如 32rpx→1rem、36rpx→1.125rem），不写 rpx、不用 `uni.scss` 的 `$uni-*` 变量做 TDesign 主题定制。
+- **页面整体不滚动，局部滚动**：页面根容器用 `height: 100vh; overflow: hidden`，内容区 `flex:1; min-height:0`，需要滚动的区域用 `scroll-view` 局部滚动；禁止用 `min-height:100vh` 让整页随内容撑高出现页面级滚动条。
 - 非必要不新增依赖；新增前先确认现有依赖或 uni 官方能力是否已覆盖，并说明理由。
 
 ## 3. 最小改动原则

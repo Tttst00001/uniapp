@@ -1,0 +1,243 @@
+.page {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.back {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.25rem 0 0 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.form-scroll {
+  flex: 1;
+  min-height: 0;
+}
+
+.hero {
+  height: 11.25rem;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(160deg, #4a2d8f 0%, #6d3fc4 45%, #a98be0 100%);
+}
+
+.hero-avatar-wrap {
+  position: relative;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(255, 255, 255, 0.6);
+}
+
+.hero-edit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #7b2ff7;
+}
+
+.hero-name {
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form {
+  padding: 0 1rem;
+}
+
+.form-row {
+  min-height: 2.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f2;
+}
+
+.form-label {
+  flex: none;
+  min-width: 6.125rem;
+  font-size: 0.875rem;
+  color: #212124;
+}
+
+.form-value {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-value--chips {
+  gap: 0.375rem;
+  overflow: hidden;
+}
+
+.value-text {
+  font-size: 0.875rem;
+  color: #6b6b70;
+  white-space: nowrap;
+}
+
+.row-arrow {
+  flex: none;
+  margin-left: 0.25rem;
+  color: #b0b0b5;
+}
+
+.chip {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.1875rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.75rem;
+  color: #6b6b70;
+  background-color: #f4f5f6;
+  border-radius: 0.25rem;
+}
+
+.chip--active {
+  color: #7b2ff7;
+  background-color: #ffffff;
+  border: 1px solid #7b2ff7;
+}
+
+.chip__text {
+  flex: none;
+  white-space: nowrap;
+}
+
+.chip__tag {
+  flex: none;
+  color: #ffffff;
+  background-color: #7b2ff7;
+  border-radius: 0.1875rem;
+  padding: 0 0.1875rem;
+  font-size: 0.5625rem;
+}
+
+.form-gap {
+  height: 4.5rem;
+}
+
+.more-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 3rem;
+  color: #6b6b70;
+  font-size: 0.8125rem;
+}
+
+.more-panel {
+  border-top: 1px solid #f0f0f2;
+}
+
+.name-input {
+  width: 11rem;
+  --td-input-vertical-padding: 0;
+}
+
+.bottom-bar {
+  flex: none;
+  height: 4rem;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f2;
+}
+
+.bottom-action {
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+}
+
+.bottom-action__text {
+  margin-top: 0.125rem;
+  font-size: 0.625rem;
+}
+
+.submit-btn {
+  width: 12rem;
+}
+
+.sheet-head {
+  position: relative;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-close {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #575e6a;
+}
+
+.sheet-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212124;
+}
+
+.sheet-confirm {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.5rem !important;
+  height: 1.5625rem !important;
+  --td-button-large-font: 600 0.75rem / 1.125rem var(--td-font-family);
+}
+
+.sheet-confirm.t-button {
+  background-image: url('https://image-1251917893.file.myqcloud.com/tip-project/pubg/pubg-match/bg-btn-112.png') !important;
+}

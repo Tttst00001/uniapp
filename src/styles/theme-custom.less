@@ -1,0 +1,25 @@
+@import '@tdesign/uniapp/theme-light.less';
+
+@button-bg-image: 'https://image-1251917893.file.myqcloud.com/tip-project/pubg/pubg-match/horizon/btn-normal.png';
+
+.t-button[class*='t-button--size-large'] {
+  --td-button-primary-color: #000000;
+  --td-button-default-color: #000000;
+  --td-button-light-color: #000000;
+  --td-button-large-font: 600 1.25rem / 1.875rem var(--td-font-family);
+  --td-button-border-radius: 0;
+  background-image: url(@button-bg-image) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.t-button[class*='t-button--size-large']::after {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.t-popup--bottom {
+  border-radius: 0 !important;
+}
